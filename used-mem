@@ -250,7 +250,7 @@ set_up_format() {
 }
 
 # Main
-main() {
+run_segment () {
     calculate_memory || return 1
 
     local format=$FORMAT
@@ -271,6 +271,3 @@ main() {
         echo '========== ========== ========== =========' 1>&2
     fi
 }
-
-main || exit_usage
-
